@@ -47,7 +47,7 @@ k6-performance-testing
 └── README.md
 
 
-flowchart TD
+**flowchart TD**
     A[crocodile.js] --> B[Load ENV config]
     A --> C[registerUser()]
     C --> D[auth0Utility.js]
@@ -58,20 +58,20 @@ flowchart TD
     G --> I[Private API /my/crocodiles]
     A --> J[Generate HTML Report]
 
-Run this command from project root:
+## **Run this command from project root:**
 k6 run -e ENV=dev -e DURATION=10 -e VUS=30 -e SERVICE=crocodiles .\crocodile.js
 
-Summary
+## **Summary**
 
 This project provides a scalable, modular, and extensible performance testing framework for REST APIs using k6.
 It can easily be extended for:
 
-Multi-service testing
+## Multi-service testing
 Token-based authentication flows
 CI/CD integration (GitHub Actions, Jenkins, GitLab CI)
 Distributed load execution
 
-Author
+## **Author**
 Abhijit Das
 📍 India
 🚀 Passionate about Automation, Performance Testing, and Scaling Systems
