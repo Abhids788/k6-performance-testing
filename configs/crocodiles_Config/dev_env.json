@@ -1,0 +1,10 @@
+{
+    "authUrl": "http://localhost:8000/auth/token/login/",
+    "audience": "",
+    "clientId": "",
+    "clientSecrete": "",
+    "userId": "",
+    "serviceUrl": "http://localhost:8000",
+    "registerUrl_url": "http://localhost:8000/user/register/"
+
+}

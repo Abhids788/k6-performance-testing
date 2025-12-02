@@ -1,0 +1,8 @@
+{
+    "authUrl": "",
+    "audience": "",
+    "clientId": "",
+    "clientSecrete": "",
+    "userId": "",
+    "serviceUrl": "http://localhost:8000"
+}
