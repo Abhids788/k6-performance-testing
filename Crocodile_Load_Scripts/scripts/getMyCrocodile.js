@@ -6,14 +6,20 @@ import {validateStatus} from "../../commonUtils/Utils.js"
 const slowRequests = new Counter('getDetails_slow_requests');
 const RequestDurations = new Trend ('getDetails_request_durations');
 const slowRequestsDuration = new Trend ('getDetails_slowRequest_durations');
- const config = JSON.parse(open(`../../configs/crocodiles_Config/${__ENV.ENV}_env.json`));
+// const config = JSON.parse(open(`../../configs/crocodiles_Config/${__ENV.ENV}_env.json`));
 
-export function getAllCrocodile(data){
+export function getMyCrocodile(data){
     
-    group("Get All Crocodiles", () => {        
+    group("Get My Crocodiles", () => {
+        console.log("TokenG:"+ data.token)
+        const headers={
+            Authorization: `Bearer ${data.token}`
+        };        
         let response = http.get(    
-            `${config.serviceUrl}/public/crocodiles/`,
-           
+            `${data.config.serviceUrl}/my/crocodiles/`,
+            {
+                headers: headers
+            }
         )
 
         RequestDurations.add(response.timings.duration);
