@@ -11,7 +11,6 @@ const slowRequestsDuration = new Trend ('getDetails_slowRequest_durations');
 export function getMyCrocodile(data){
     
     group("Get My Crocodiles", () => {
-        console.log("TokenG:"+ data.token)
         const headers={
             Authorization: `Bearer ${data.token}`
         };        
